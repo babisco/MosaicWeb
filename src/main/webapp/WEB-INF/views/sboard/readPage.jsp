@@ -1,14 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>   
 
-<%@include file="../include/header.jsp"%>
-<script type="text/javascript" src="/resources/js/upload.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
-<!-- Main content -->
-    <style type="text/css">
+<html>
+<head>
+<title>readPage.jsp</title>
+
+<style type="text/css">
     .popup {position: absolute;}
     .back { background-color: gray; opacity:0.5; width: 100%; height: 300%; overflow:hidden;  z-index:1101;}
     .front { 
@@ -20,15 +19,20 @@
        max-height: 800px; 
        overflow: auto;       
      } 
-  	
-    </style>
+</style>
 
+<script type="text/javascript" src="/resources/js/upload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+</head>
+
+<body>
+
+<!-- Main content -->
     <div class='popup back' style="display:none;"></div>
     <div id="popup_front" class='popup front' style="display:none;">
      <img id="popup_img">
     </div>
 
-<section class="content">
 	<div class="row">
 		<!-- left column -->
 		<div class="col-md-12">
@@ -170,8 +174,6 @@
   </div>
 </div>      
 	
-	
-</section>
 <!-- /.content -->
 
 
@@ -237,10 +239,7 @@
 
 	}
 
-	var bno = $
-	{
-		boardVO.bno
-	};
+	var bno = ${boardVO.bno};
 
 	var replyPage = 1;
 
@@ -485,9 +484,5 @@ $(document).ready(function(){
 });
 </script>
 
-
-
-
-
-
-<%@include file="../include/footer.jsp"%>
+</body>
+</html>

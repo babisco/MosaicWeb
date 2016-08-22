@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
-<%@include file="../include/header.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 
+<html>
+<head>
+<title>register.jsp</title>
 <style>
 .fileDrop {
   width: 80%;
@@ -14,9 +14,10 @@
   
 }
 </style>
+</head>
 
+<body>
 <!-- Main content -->
-<section class="content">
 	<div class="row">
 		<!-- left column -->
 		<div class="col-md-12">
@@ -74,9 +75,6 @@
 
 	</div>
 	<!-- /.row -->
-</section>
-<!-- /.content -->
-</div>
 <!-- /.content-wrapper -->
 
 <script type="text/javascript" src="/resources/js/upload.js"></script>
@@ -153,6 +151,7 @@ $("#registerForm").submit(function(event){
 
 </script>
 
+</body>
+</html>
  
 
-<%@include file="../include/footer.jsp"%>

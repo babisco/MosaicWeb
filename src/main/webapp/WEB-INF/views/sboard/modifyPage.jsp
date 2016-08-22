@@ -1,9 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@include file="../include/header.jsp"%>
-
-
+<html>
+<head>
+<title>modifyPage.jsp</title>
 <style>
 .fileDrop {
   width: 80%;
@@ -14,10 +13,10 @@
   
 }
 </style>
+</head>
 
-
+<body>
 <!-- Main content -->
-<section class="content">
 	<div class="row">
 		<!-- left column -->
 		<div class="col-md-12">
@@ -230,10 +229,6 @@ $("#popup_img").on("click", function(){
 
 </script>
 
-
-
-
-
 			</div>
 			<!-- /.box -->
 		</div>
@@ -241,9 +236,7 @@ $("#popup_img").on("click", function(){
 
 	</div>
 	<!-- /.row -->
-</section>
 <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
 
-<%@include file="../include/footer.jsp"%>
+</body>
+</html>
