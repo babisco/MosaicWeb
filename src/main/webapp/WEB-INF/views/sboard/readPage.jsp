@@ -8,12 +8,24 @@
 <title>readPage.jsp</title>
 
 <style type="text/css">
-    .popup {position: absolute;}
-    .back { background-color: gray; opacity:0.5; width: 100%; height: 300%; overflow:hidden;  z-index:1101;}
+    .popup {
+    	position: absolute;
+    }
+    .back { 
+    	background-color: gray; 
+    	opacity:0.5; 
+    	width: 100%; 
+    	height: 300%; 
+    	overflow:hidden;  
+    	z-index:1101;
+    }
     .front { 
-       z-index:1110; opacity:1; boarder:1px; margin: auto; 
-      }
-     .show{
+       z-index:1110; 
+       opacity:1; 
+       boarder:1px; 
+       margin: auto; 
+    }
+    .show {
        position:relative;
        max-width: 1200px; 
        max-height: 800px; 
@@ -22,12 +34,10 @@
 </style>
 
 <script type="text/javascript" src="/resources/js/upload.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script> 
 </head>
 
 <body>
-
-<!-- Main content -->
     <div class='popup back' style="display:none;"></div>
     <div id="popup_front" class='popup front' style="display:none;">
      <img id="popup_img">
@@ -178,40 +188,38 @@
 
 
 <script id="templateAttach" type="text/x-handlebars-template">
-<li data-src='{{fullName}}'>
-  <span class="mailbox-attachment-icon has-img"><img src="{{imgsrc}}" alt="Attachment"></span>
-  <div class="mailbox-attachment-info">
-	<a href="{{getLink}}" class="mailbox-attachment-name">{{fileName}}</a>
-	</span>
-  </div>
-</li>                
+	<li data-src='{{fullName}}'>
+ 	 	<span class="mailbox-attachment-icon has-img"><img src="{{imgsrc}}" alt="Attachment"></span>
+  		<div class="mailbox-attachment-info">
+			<a href="{{getLink}}" class="mailbox-attachment-name">{{fileName}}</a>
+		</span>
+  		</div>
+	</li>                
 </script>  
 
 
           
 <script id="template" type="text/x-handlebars-template">
-				{{#each .}}
-	         <li class="replyLi" data-rno={{rno}}>
-             <i class="fa fa-comments bg-blue"></i>
+	{{#each .}}
+		<li class="replyLi" data-rno={{rno}}>
+			<i class="fa fa-forward bg-blue"></i>
              <div class="timeline-item" >
                 <span class="time">
                   <i class="fa fa-clock-o"></i>{{prettifyDate regdate}}
                 </span>
                 <h3 class="timeline-header"><strong>{{rno}}</strong> -{{replyer}}</h3>
                 <div class="timeline-body">{{replytext}} </div>
-								<div class="timeline-footer">
-								{{#eqReplyer replyer }}
-                  <a class="btn btn-primary btn-xs" 
-									data-toggle="modal" data-target="#modifyModal">Modify</a>
-								{{/eqReplyer}}
-							  </div>
-	            </div>			
-           </li>
-        {{/each}}
+				<div class="timeline-footer">
+					{{#eqReplyer replyer }}
+                		 <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modifyModal">Modify</a>
+					{{/eqReplyer}}
+				</div>
+	         </div>			
+		</li>
+	{{/each}}
 </script>  
 
 <script>
-
 	
 	Handlebars.registerHelper("eqReplyer", function(replyer, block) {
 		var accum = '';
@@ -278,7 +286,8 @@
 	};
 
 	$("#repliesDiv").on("click", function() {
-
+		alert("repliesDiv clicked...");
+		
 		if ($(".timeline li").size() > 1) {
 			return;
 		}
@@ -287,7 +296,7 @@
 	});
 
 	$(".pagination").on("click", "li a", function(event) {
-
+		alert("pagination clicked...." + replypage);
 		event.preventDefault();
 
 		replyPage = $(this).attr("href");
@@ -297,7 +306,7 @@
 	});
 
 	$("#replyAddBtn").on("click", function() {
-
+		alert("replyAddBtn clicked....");
 		var replyerObj = $("#newReplyWriter");
 		var replytextObj = $("#newReplyText");
 		var replyer = replyerObj.val();
@@ -330,7 +339,7 @@
 	});
 
 	$(".timeline").on("click", ".replyLi", function(event) {
-
+	
 		var reply = $(this);
 
 		$("#replytext").val(reply.find('.timeline-body').text());
@@ -339,7 +348,8 @@
 	});
 
 	$("#replyModBtn").on("click", function() {
-
+		alert("replyModeBtn clicked.....");
+		
 		var rno = $(".modal-title").html();
 		var replytext = $("#replytext").val();
 

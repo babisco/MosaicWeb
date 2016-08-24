@@ -448,8 +448,8 @@
 		</aside>
 
 		<!-- Content Wrapper. Contains Page Content -->
-		<div class="content-wrapper">
-				<section class="content">
+		<div class="content-wrapper" style="border: 2px solid olive;">
+				<section class="content" style="border: 2px solid blue;">
 					<!-- MMMMMMMMMMMMMMMMMM -->
 					<!-- Start Main Content -->
 					<!-- WWWWWWWWWWWWWWWWWW -->
