@@ -108,7 +108,7 @@
 			var template = Handlebars.compile(temp2);
 			
 			var html = template(depts);
-			console.log(html);
+			console.log(html); hand
 			
 			$('#result').html(html);
 		});
