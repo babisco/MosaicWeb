@@ -14,6 +14,11 @@
 
 <body>
 <h1>A.jsp</h1>
-
+<ol>
+	<li>spring</li>
+	<li>mybatis</li>
+	<li>jQuery</li>
+	<li>Bootstrap</li>
+</ol>
 </body>
 </html>
