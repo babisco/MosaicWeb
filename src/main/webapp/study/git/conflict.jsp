@@ -14,6 +14,8 @@
 
 <body>
 <h1>Conflict.jsp</h1>
-
+<p>
+Conflict 해.결. 
+</p>
 </body>
 </html>
