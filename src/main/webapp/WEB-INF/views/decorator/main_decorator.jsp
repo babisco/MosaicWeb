@@ -453,7 +453,9 @@
 					<!-- MMMMMMMMMMMMMMMMMM -->
 					<!-- Start Main Content -->
 					<!-- WWWWWWWWWWWWWWWWWW -->
+					<div class="container-fluid">
 					<sitemesh:write property="body" />
+					</div>
 					<!-- MMMMMMMMMMMMMMMM -->
 					<!-- End Main Content -->
 					<!-- WWWWWWWWWWWWWWWW -->
